@@ -7,10 +7,4 @@ router.get("/", async (req, res, next) => {
   });
 });
 
-router.get("/movie", async (req, res, next) => {
-  res.render("movie.html", {
-    title: "Testing Api",
-  });
-});
-
 module.exports = router;

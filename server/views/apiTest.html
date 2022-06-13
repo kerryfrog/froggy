@@ -1,12 +1,13 @@
-{% extends './layout/layout.html' %} 
-{% block content %}
+{% extends './layout/layout.html' %} {% block content %}
 
-<body>
-  <h3>Raverly api test</h3>
-  <button class="favorite styled" type="button" onclick="button_click()">
-    Add to favorites
-  </button>
-  <script src="/ravelryApi.js"></script>
-</body>
+<h3>Raverly api test</h3>
+<button class="favorite styled" type="button" onclick="button_click()">
+  Add to favorites
+</button>
+
+{% for url in urls %}
+<img src="{{url}}" alt="pics of yarn" width="180" height="180" />
+{% endfor %} {% endblock %} {% block script %}
+<script src="/ravelryApi.js"></script>
 
 {% endblock %}
